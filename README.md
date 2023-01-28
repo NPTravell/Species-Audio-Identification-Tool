@@ -1,9 +1,13 @@
-# Species-Audio-Identification-Tool
+# Bird-Species-Audio-Identification-Tool
 
 
-explain the problem - something like:
+### what is the problem PLACEHOLDER SUBTITLE
 
-_the field station I worked with had months, if not years of audio data, but did not have the hundreds of volunteers it would need to go through each recording and identify the species heard within. The issue with identification skill. Don't know what's on the island so difficult to apply for funding and build a case for protection against rapidly enroaching aqua/agriculture_
+Whilst working with an ecological field station, the issue of having years of (good!) audio data but no capacity to analyse it. It would take hundreds of volunteers to listen to these recordings and identify which species were present by any meaningful deadline. Furthermore, any volunteer would have to invest time training to identify calls (of which there may be a dizzying number), after which there is no guarantee of accuracy due to a range of factors - such as background noise from weather dramatically affecting what can be accurately heard.
+
+Without knowing what species are on the island it would be difficult to apply for funding to continue conservation efforts, and almost impossible to build a case for protecting the land against rapidly enroaching aquaculture and tourism expansion.
+
+### why record audio? PLACEHOLDER SUBTITLE
 
 explain the tool, something like: 
 
