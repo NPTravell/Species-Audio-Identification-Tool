@@ -3,6 +3,8 @@
 
 ### What is the problem with wildlife audio data?
 
+_this seems too long - shorten it!_
+
 Whilst working with an ecological field station, the issue of having years of (good!) audio data but no capacity to analyse it. It would take hundreds of volunteers to listen to these recordings and identify which bird species were present by any meaningful deadline. Furthermore, any volunteer would have to invest time training to identify calls (of which there may be a dizzying number), after which there is no guarantee of accuracy due to a range of factors - such as background noise from weather dramatically affecting what can be accurately heard.
 
 Whilst it may be easier for volunteers to identify birds within images, audio recordings provide the advantage of capturing the activity of these birds in a 360 degree area around the device, and can capture this activity even if the animal is not in direct line of sight (for example, due to the bird sitting in well covered trees or bushes, or calling out during night hours) 
@@ -10,6 +12,8 @@ Whilst it may be easier for volunteers to identify birds within images, audio re
 Without knowing what species are on the island it would be difficult to apply for funding to continue conservation efforts, and almost impossible to build a case for protecting the land against rapidly enroaching aquaculture and tourism expansion.
 
 ### What was the solution?
+
+_this seems also too long - shorten it!_
 
 To solve the issue of volunteer capacity, both in terms of 'labour pool' and of identification skill, a deep learning neural net audio classification tool was developed within Python (using Tensorflow). Audio was transformed into a waveform (an image representation of sound - see below for more information) format with which object detection was carried out on the long survey audio files. 
 
