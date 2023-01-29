@@ -37,16 +37,26 @@ Scientific literature suggests that one way of estimating the abundance of indiv
 
 ![Bottom 3](https://user-images.githubusercontent.com/122735369/215263543-9525ba62-15c4-4f82-a8e2-3bbc7b28d916.png)
 
-<p align="center"><sup>placeholder caption</sup></p>
+<p align="center"><sup>Charts showing trends in various aspects of call behaviour</sup></p>
 
 ## placeholder title
 
-The tool splits long survey audio up into shorter clips, with which it applies object detection with and attempts to answer the question "does this survey waveform _look_ like the species waveform?" Here a graph is supplied to show the field station which species' models are underperforming (and thus may require more reference sound files for training). A full understanding of precision (proportion of positive identifications for a species that were correct), recall (proportion of real positives of a species that were identified correctly), and loss are not required - simply assessing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all due to no files existing - will suffice.
+The tool splits long survey audio up into shorter clips, with which it applies object detection with and attempts to answer the question "does this survey waveform _look_ like the species waveform?" 
+
+Here a graph is supplied to show the field station which species' models are underperforming (and thus may require more reference sound files for training). A full understanding of precision (proportion of positive identifications for a species that were correct), recall (proportion of real positives of a species that were identified correctly), and loss are not required - simply assessing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all due to no files existing - will suffice.
+
+The script will not retrain pre-existing models unless a species has been marked for retraining in a simple Excel file - again ensuring that the full script can generally be run hands-off
 
 ![Copy of Copy of Bottom 3 (2)](https://user-images.githubusercontent.com/122735369/215263692-78bd5a51-9120-4ff6-b6d3-6f26c6bbf132.png)
-<p align="center"><sup>placeholder caption</sup></p>
+<p align="center"><sup>Left: example waveform comparison between a bird call from 'Species 1' and background noise. Right: chart showing how the trained models compare</sup></p>
 
-## next steps
+## Next Steps
+
+The tool has already been implemented at the field station, and processes established to generate sound reference libraries to train models on, as well as to identify species in survey recordings brought back from the field. 
+
+Comparisons between the models performance and more pen and paper identification methods should be carried out to confirm it is working as intended and at least as good as manual volunteer assessment.
+
+As the computer hardware on site was limited, relatively small models (with fewer and smaller neuronal layers) were utilised. Perhaps efforts to at least temporarily acquire more powerful hardware and to experiment with more complex and larger architecture could be made. 
 
 
 
