@@ -37,7 +37,7 @@ Scientific literature suggests that a method of estimating abundance could be to
 
 ## Deep learning neural network audio classification
 
-The tool splits long survey audio up into shorter clips and uses object detection to attempt to answer the question "does this survey waveform _look_ like the species waveform?". 
+The tool splits long survey audio up into shorter clips and uses object detection to attempt to answer the question "does this survey waveform _look_ like the species waveform?"
 
 A graph is supplied to show the field station which species have models that are underperforming (and thus may require more reference sound files for training). A full understanding of precision (which is the proportion of positive identifications for a species that were correct), and recall (proportion of real positives of a species that were identified correctly) are not required - simply knowing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all - will suffice.
 
@@ -52,4 +52,4 @@ The tool has already been implemented at the field station, and processes establ
 
 2. As the computer hardware on site was limited, relatively small models (with fewer and smaller neuronal layers) were utilised. Perhaps efforts to at least temporarily acquire more powerful hardware and to experiment with more complex and larger architecture could be made. 
 
-<p align="center"><sup> This code was produced to help a wildlife charity - visitors are encouraged to ask questions and/or expand upon the script with additional features (particularly regarding model architecture, enhanced visualisations, and improving work flow/process checks). If any research organisations want help implementing, or a free demo of the tool, feel free to reach out</sup></p>
+<p align="center"><sup> This code was produced to help a wildlife charity - visitors are encouraged to ask questions and/or expand upon the script with additional features (particularly regarding model architecture, enhanced visualisations, and improving work flow/process checks). If any research organisations want help implementing, or a free demo of, the tool then feel free to reach out</sup></p>
