@@ -11,8 +11,6 @@ Without knowing what species are on the island it would be difficult to continue
 
 ### What was the solution?
 
-_this seems also too long - shorten it!_
-
 To solve the issue of volunteer 'labour pool' and identification skill, a 'audio classification' tool was developed within Python (using Tensorflow). Audio was transformed into a waveform (an image representation of sound - see below for more information) format with which object detection (via a 'deep learning neural network') was carried out on the long survey audio files. 
 
 Volunteers created training 'sound reference libraries' (produced after leading a short [Audacity](https://www.audacityteam.org/) easily delivered and enthusiastically understood workshop). Audio clips were sourced from Xenocanto, eBird, and even YouTube, meaning the volunteer didn't need to learn any identification skills, just a short clipping process.
@@ -23,38 +21,37 @@ Note: the tool doesn't account for imperfect detection (for example, a bird at 1
 
 ## What did we discover about bird species on the island?
 
-Species richness is the count of the unique species, and is an important measure of biodiversity. The table below is abbreviated to only include 3 (anonymised) locations across 3 months in 2017, in which we can see fairly static species richness during this time. This could be due to the island context (with migration to and from the location being relatively limited to those with the endurance to cross the sea) or due to the particular season(s) selected - with colder months being periods of relatively lower activity.
+Species richness is the count of the unique species, and is an important measure of biodiversity. The table below is abbreviated to only include 3 (anonymised) locations across 3 months in 2017, in which we can see fairly static species richness during this time. This could be due to the island context (with migration to and from the location being relatively limited to those with the endurance to cross the sea) or due to the particular season(s) selected - with colder months possibly being periods of relatively lower activity.
 
 ![Copy of Copy of Bottom 3 (3)](https://user-images.githubusercontent.com/122735369/215264531-1eb4be82-d189-430c-9fc9-6dd15f8962fa.png)
 
-<p align="center"><sup>Left: table showing the unique count of species heard and identified over time. Right: an example view from where one of the audio detectors were placed</sup></p>
+<p align="center"><sup>Left: Table showing the unique count of species heard and identified over time. Right: Example view from where one audio detector was placed</sup></p>
 
-Whilst it is essential to identify which species you have recorded, it can be useful to know how many individuals are present in each recording too. The number of times an individual calls during a set time can vary dramatically from species to species, and it can be difficult to discern how many individuals are contributing to this call tally.
+Along with knowing which species are heard, it can be useful to know how many individuals are present too, however it can be difficult to discern how many individuals are contributing to this call tally.
 
-Scientific literature suggests that one way of estimating the abundance of individuals belonging to a species could be to divide the total number of cues detected per minute by the species average cue rate. The following abbreviated tables (the field station receives the full table) show the results from this method, and a relationship between those of smaller group size and lower call rates as well as fewer total calls was established. Individuals of larger groups (species 12, 18, and 17) tended to be recorded more in total, but were not identified to be the species with the most calls per individuals; suggesting that more species with mroe medium-sized maximum group had individuals that called more often (REWORD THAT)
+Scientific literature suggests that one way of estimating the abundance could be to divide the total number of cues detected per unit time by the species average cue rate. The following abbreviated tables show the results from this method, and a relationship between those of smaller group size and lower call rates as well as fewer total calls was established. Individuals of larger groups (species 12, 18, and 17) tended to be recorded more in total, but were not identified to be the species with the most calls per individuals; suggesting that more species with more central maximum group sizes had individuals that called more often
 
 ![Bottom 3](https://user-images.githubusercontent.com/122735369/215263543-9525ba62-15c4-4f82-a8e2-3bbc7b28d916.png)
 
 <p align="center"><sup>Charts showing trends in various aspects of call behaviour</sup></p>
 
-## placeholder title
+## Deep learning neural network audio classification
 
-The tool splits long survey audio up into shorter clips, with which it applies object detection with and attempts to answer the question "does this survey waveform _look_ like the species waveform?" 
+The tool splits long survey audio up into shorter clips and through using object detection attempts to answer the question "does this survey waveform _look_ like the species waveform?"
 
-Here a graph is supplied to show the field station which species' models are underperforming (and thus may require more reference sound files for training). A full understanding of precision (proportion of positive identifications for a species that were correct), recall (proportion of real positives of a species that were identified correctly), and loss are not required - simply assessing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all due to no files existing - will suffice.
+A graph is supplied to show the field station which species have models that are underperforming (and thus may require more reference sound files for training). A full understanding of precision (which is the proportion of positive identifications for a species that were correct), and recall (proportion of real positives of a species that were identified correctly) are not required - simply knowing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all - will suffice.
 
-The script will not retrain pre-existing models unless a species has been marked for retraining in a simple Excel file - again ensuring that the full script can generally be run hands-off
+The script will not retrain pre-existing models unless a species has been marked for retraining in a simple Excel file - again ensuring that the full script can generally be run hands-free
 
 ![Copy of Copy of Bottom 3 (2)](https://user-images.githubusercontent.com/122735369/215263692-78bd5a51-9120-4ff6-b6d3-6f26c6bbf132.png)
-<p align="center"><sup>Left: example waveform comparison between a bird call from 'Species 1' and background noise. Right: chart showing how the trained models compare</sup></p>
+<p align="center"><sup>Left: Example waveform comparison between a bird call and background noise. Right: Chart showing how the trained models compare</sup></p>
 
 ## Next Steps
 
-The tool has already been implemented at the field station, and processes established to generate sound reference libraries to train models on, as well as to identify species in survey recordings brought back from the field. 
+The tool has already been implemented at the field station, and processes established to both allow untrained volunteers to generate sound reference libraries for model training, as well as to identify species in survey recordings brought back from the field. The next steps are recommended:
 
-Comparisons between the models performance and more pen and paper identification methods should be carried out to confirm it is working as intended and at least as good as manual volunteer assessment.
+1. Comparisons between the models performance and more pen and paper identification methods should be carried out to confirm the tool is working as intended and at least as good as manual volunteer assessment.
 
-As the computer hardware on site was limited, relatively small models (with fewer and smaller neuronal layers) were utilised. Perhaps efforts to at least temporarily acquire more powerful hardware and to experiment with more complex and larger architecture could be made. 
+2. As the computer hardware on site was limited, relatively small models (with fewer and smaller neuronal layers) were utilised. Perhaps efforts to at least temporarily acquire more powerful hardware and to experiment with more complex and larger architecture could be made. 
 
-
-
+<p align="center"><sup> This code was produced to help a wildlife charity - visitors are encouraged to ask questions and/or expand upon the script with additional features (particularly regarding model architecture, enhanced visualisations, and improving work flow/process checks). If any research organisations want help implementing, or a free demo of the tool, feel free to reach out</sup></p>
