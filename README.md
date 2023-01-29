@@ -41,10 +41,7 @@ Scientific literature suggests that one way of estimating the abundance of indiv
 
 ## placeholder title
 
-explain 'under the hood' for a non technical audience. explain the graph is to identify which species need more files for DL model training
-recall - What proportion of actual positives was identified correctly? (more important - we want to know if the species was there)
-precision - What proportion of positive identifications was actually correct? (not AS bad if we say that a species was there when it wasn't)
-Accuracy is generally linked inversely to loss, so we want as little as possible 
+The tool splits long survey audio up into shorter clips, with which it applies object detection with and attempts to answer the question "does this survey waveform _look_ like the species waveform?" Here a graph is supplied to show the field station which species' models are underperforming (and thus may require more reference sound files for training). A full understanding of precision (proportion of positive identifications for a species that were correct), recall (proportion of real positives of a species that were identified correctly), and loss are not required - simply assessing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all due to no files existing - will suffice.
 
 ![Copy of Copy of Bottom 3 (2)](https://user-images.githubusercontent.com/122735369/215263692-78bd5a51-9120-4ff6-b6d3-6f26c6bbf132.png)
 <p align="center"><sup>placeholder caption</sup></p>
