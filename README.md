@@ -36,6 +36,8 @@ The tool has already been implemented at the field station, and processes establ
 
 2. As the computer hardware on site was limited, relatively small models (with fewer and smaller neuronal layers) were utilised. Perhaps efforts to at least temporarily acquire more powerful hardware and to experiment with more complex and larger architecture could be made. 
 
+3. The script can be put into Streamlit or Flask to make a simplified interface for volunteers to operate 
+
 ## What did we discover about bird species on the island?
 
 Species richness is the count of the unique species, and is an important measure of biodiversity. The table below is abbreviated to only include 3 (anonymised) locations across 3 months in 2017, in which we can see fairly static species richness during this time. This could be due to the island context (with migration to and from the location being limited to those with the capacity to cross the sea) or due to the particular season(s) selected - with colder months possibly being periods of relatively lower activity.
