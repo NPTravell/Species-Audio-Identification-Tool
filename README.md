@@ -41,8 +41,6 @@ The tool splits long survey audio up into shorter clips and uses object detectio
 
 A graph is supplied to show the field station which species have models that are underperforming (and thus may require more reference sound files for training). A full understanding of precision (which is the proportion of positive identifications for a species that were correct), and recall (proportion of real positives of a species that were identified correctly) are not required - simply knowing where any big performance dips, or loss spikes, occur - or even a gap indicating a model was not trained at all - will suffice.
 
-The script will not retrain pre-existing models unless a species has been marked for retraining in a simple Excel file - again ensuring that the full script can generally be run hands-free
-
 ![Copy of Copy of Bottom 3 (2)](https://user-images.githubusercontent.com/122735369/215263692-78bd5a51-9120-4ff6-b6d3-6f26c6bbf132.png)
 <p align="center"><sup>Left: Example waveform comparison between a bird call and background noise. Right: Chart showing how the trained models compare</sup></p>
 
