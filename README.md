@@ -1,4 +1,4 @@
-# Bird-Species-Audio-Identification-Tool
+# Species-Audio-Identification-Tool
 
 
 Whilst working with an ecological field station, we had years of (good!) audio data but no capacity to analyse it to understand what species were there.
