@@ -1,11 +1,11 @@
 # Species-Audio-Identification-Tool
 
 
-Whilst working with an ecological field station, we had years of (good!) audio data but no capacity to analyse it to understand what species were there.
+For many ecological field stations, we can have years of (good!) audio data but no capacity to analyse it to understand what species were there.
 
 ### How do we solve the issue of volunteer 'labour pool' and identification skill?
 
-A deep learning object detection model was trained on audio libraries (sourced from sites like eBird or YouTube, and processed in [Audacity](https://www.audacityteam.org/)). The result was a solution that could answer the question "does this survey waveform _look_ like the species waveform?", and therefore tally up species calls and estimate population sizes
+To resolve this issue, this project utilises a deep learning object detection model trained on audio libraries (sourced from sites like eBird or YouTube, and processed in [Audacity](https://www.audacityteam.org/)). The result is a solution that could answer the question "does this survey waveform _look_ like the species waveform?", and therefore tally up species calls and estimate population sizes
 
 Note: the tool doesn't account for imperfect detection (for example, a species at 40m may only be heard 8% of the time - which would result in undercounting). Note also that the data presented on this repository is anonymised as some species are incredibly rare, and poaching activity is well known in the area
 
